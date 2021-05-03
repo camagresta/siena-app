@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   siteMetadata: {
     title: 'Siena Group',
@@ -23,13 +24,6 @@ module.exports = {
         isTSX: true,
         jsxPragma: `jsx`,
         allExtensions: true,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
   ],
