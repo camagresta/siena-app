@@ -26,7 +26,13 @@ let baseTheme = createMuiTheme({
       },
     },
   },
-  overrides: {},
+  overrides: {
+    MuiButton: {
+      root: {
+        fontWeight: 600,
+      },
+    },
+  },
   palette: {
     common: {
       black: '#000',

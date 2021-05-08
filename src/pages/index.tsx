@@ -1,11 +1,11 @@
 import * as React from 'react'
 import App from '../components/App'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import {
   Box,
   Card,
   CardContent,
   createStyles,
+  Divider,
   makeStyles,
   Theme,
   Typography,
@@ -36,6 +36,12 @@ const useStyles = makeStyles((theme: Theme) =>
     cardMedia: {
       width: 160,
     },
+    divider: {
+      backgroundColor: colors.pink,
+      width: '50%',
+      height: 4,
+      margin: 'auto',
+    },
     secondRoot: {
       paddingBottom: '80px',
       paddingRight: '50px',
@@ -56,7 +62,7 @@ const IndexPage = () => {
   return (
     <main>
       <title>Siena Engineering</title>
-      <App>
+      {/* <App>
         <div style={{ display: 'grid' }}>
           <StaticImage
             style={{
@@ -90,10 +96,11 @@ const IndexPage = () => {
         <div className={classes.secondRoot}>
           <Box className={classes.servicesHeader}>
             <Typography variant="h2">OUR SERVICES</Typography>
+            <Divider className={classes.divider} variant="middle" />
           </Box>
           <InfoCards />
         </div>
-      </App>
+      </App> */}
     </main>
   )
 }

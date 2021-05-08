@@ -15,8 +15,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      maxWidth: 300,
-      maxHeight: 330,
+      maxWidth: 350,
+      minHeight: 330,
     },
     media: {
       height: 140,
@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       paddingBottom: 0,
+    },
+    learnMore: {
+      float: 'right',
     },
   })
 )
@@ -50,10 +53,8 @@ const InfoCards = () => {
             project close-out.
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+        <CardActions className={classes.learnMore}>
+          <Button color="primary">Learn More</Button>
         </CardActions>
       </Card>
       <Card className={classes.root}>
@@ -68,10 +69,8 @@ const InfoCards = () => {
             project close-out.
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+        <CardActions className={classes.learnMore}>
+          <Button color="primary">Learn More</Button>
         </CardActions>
       </Card>
       <Card className={classes.root}>
@@ -86,10 +85,8 @@ const InfoCards = () => {
             project close-out.
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+        <CardActions className={classes.learnMore}>
+          <Button color="primary">Learn More</Button>
         </CardActions>
       </Card>
     </div>
