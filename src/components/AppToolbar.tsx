@@ -7,8 +7,8 @@ import { Link } from 'gatsby'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      flexGrow: 1,
+    appBar: {
+      boxShadow: 'none',
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -32,34 +32,28 @@ const appToolbarItems = [
 const AppToolbar = () => {
   const classes = useStyles()
   return (
-    <div className={classes.root}>
-      <AppBar color="primary" position="static">
-        <Toolbar>
-          <Link
-            className={classes.title}
-            style={{ textDecoration: 'none' }}
-            to={'/'}
-          >
-            <Typography
-              className={classes.title}
-              variant="h6"
-              color="secondary"
-            >
-              Siena Engineering
-            </Typography>
-          </Link>
-          {appToolbarItems.map((item) => {
-            return (
-              <Link style={{ textDecoration: 'none' }} to={item.route}>
-                <Button className={classes.navButton} color="secondary">
-                  {item.text}
-                </Button>
-              </Link>
-            )
-          })}
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar className={classes.appBar} position="fixed" color="primary">
+      <Toolbar>
+        <Link
+          className={classes.title}
+          style={{ textDecoration: 'none' }}
+          to={'/'}
+        >
+          <Typography className={classes.title} variant="h6" color="secondary">
+            Siena Engineering
+          </Typography>
+        </Link>
+        {appToolbarItems.map((item) => {
+          return (
+            <Link style={{ textDecoration: 'none' }} to={item.route}>
+              <Button className={classes.navButton} color="secondary">
+                {item.text}
+              </Button>
+            </Link>
+          )
+        })}
+      </Toolbar>
+    </AppBar>
   )
 }
 export default AppToolbar

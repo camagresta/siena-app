@@ -1,6 +1,6 @@
 import React from 'react'
-import App from '../components/App'
+import Layout from '../components/Layout'
 const ServicesPage = () => {
-  return <App>hi</App>
+  return <Layout>hi</Layout>
 }
 export default ServicesPage

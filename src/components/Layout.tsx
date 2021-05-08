@@ -6,11 +6,12 @@ import AppToolbar from './AppToolbar'
 
 const pageStyles = {
   padding: 0,
-  height: '100vh',
   margin: 0,
+  overflowX: 'hidden',
 }
-const App = ({ children }) => {
+const Layout = ({ children }) => {
   return (
+    //@ts-ignore
     <main style={pageStyles}>
       <CssBaseline />
       <ThemeProvider theme={baseTheme}>
@@ -20,4 +21,4 @@ const App = ({ children }) => {
     </main>
   )
 }
-export default App
+export default Layout
